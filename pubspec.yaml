@@ -1,8 +1,5 @@
-name: crime_search_app
-description: Crime News Search App
-
+name: crime_app
 publish_to: 'none'
-
 version: 1.0.0+1
 
 environment:
@@ -11,7 +8,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -19,5 +15,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  assets:
-    - crimes.json
