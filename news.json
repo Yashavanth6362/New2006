@@ -1,72 +1,72 @@
 [
   {
+    "id": 47936184,
+    "title": "Auto Polo",
+    "url": "https://en.wikipedia.org/wiki/Auto_polo",
+    "score": 31,
+    "time": 1777391497
+  },
+  {
+    "id": 47972447,
+    "title": "Grok 4.3",
+    "url": "https://docs.x.ai/developers/models/grok-4.3",
+    "score": 24,
+    "time": 1777624171
+  },
+  {
     "id": 47965060,
     "title": "How Mark Klein told the EFF about Room 641A [book excerpt]",
     "url": "https://thereader.mitpress.mit.edu/the-whistleblower-who-uncovered-the-nsas-big-brother-machine/",
-    "score": 554,
+    "score": 588,
     "time": 1777567260
   },
   {
     "id": 47946899,
     "title": "New copy of earliest poem in English, written 1,3k years ago, discovered in Rome",
     "url": "https://www.tcd.ie/news_events/articles/2026/caedmons-hymn-discovery/",
-    "score": 37,
+    "score": 57,
     "time": 1777462540
-  },
-  {
-    "id": 47951295,
-    "title": "Opus 4.7 knows the real Kelsey",
-    "url": "https://www.theargumentmag.com/p/i-can-never-talk-to-an-ai-anonymously",
-    "score": 314,
-    "time": 1777482543
   },
   {
     "id": 47965108,
     "title": "For Linux kernel vulnerabilities, there is no heads-up to distributions",
     "url": "https://www.openwall.com/lists/oss-security/2026/04/30/10",
-    "score": 464,
+    "score": 495,
     "time": 1777567427
+  },
+  {
+    "id": 47951295,
+    "title": "Opus 4.7 knows the real Kelsey",
+    "url": "https://www.theargumentmag.com/p/i-can-never-talk-to-an-ai-anonymously",
+    "score": 342,
+    "time": 1777482543
   },
   {
     "id": 47964617,
     "title": "Shai-Hulud Themed Malware Found in the PyTorch Lightning AI Training Library",
     "url": "https://semgrep.dev/blog/2026/malicious-dependency-in-pytorch-lightning-used-for-ai-training/",
-    "score": 386,
+    "score": 394,
     "time": 1777565366
   },
   {
-    "id": 47948152,
-    "title": "Roboticist-Turned-Teacher Built a Life-Size Replica of Eniac",
-    "url": "https://spectrum.ieee.org/roboticist-turned-teacher-eniac-replica",
-    "score": 24,
-    "time": 1777469327
-  },
-  {
-    "id": 47942863,
-    "title": "Maladaptive Frugality",
-    "url": "https://herbertlui.net/maladaptive-frugality/",
-    "score": 83,
-    "time": 1777423815
+    "id": 47971771,
+    "title": "If I Could Make My Own GitHub",
+    "url": "https://matduggan.com/if-i-could-make-my-own-github/",
+    "score": 22,
+    "time": 1777616461
   },
   {
     "id": 47927011,
     "title": "Softmax, can you derive the Jacobian? And should you care?",
     "url": "https://idlemachines.co.uk/essays/softmax",
-    "score": 20,
+    "score": 37,
     "time": 1777322302
   },
   {
     "id": 47969288,
     "title": "CPanel and WHM Authentication Bypass \u2013 CVE-2026-41940",
     "url": "https://labs.watchtowr.com/the-internet-is-falling-down-falling-down-falling-down-cpanel-whm-authentication-bypass-cve-2026-41940/",
-    "score": 88,
+    "score": 101,
     "time": 1777589331
-  },
-  {
-    "id": 47967786,
-    "title": "Can I disable all data collection from my vehicle?",
-    "url": "https://rivian.com/support/article/can-i-disable-all-data-collection-from-my-vehicle",
-    "score": 604,
-    "time": 1777580842
   }
 ]
