@@ -1,0 +1,37 @@
+name: Scrape Crime News
+
+on:
+  schedule:
+    # Runs at 08:00 UTC every day (adjust as needed)
+    - cron: '0 8 * * *'
+  workflow_dispatch:   # allows manual trigger
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # needed if we commit the JSON back
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run crime scraper
+        run: python scrape_crimes.py
+
+      - name: Commit and push updated crimes.json (optional)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add crimes.json
+          git diff --staged --quiet || git commit -m "Update crime data [skip ci]"
+          git push
