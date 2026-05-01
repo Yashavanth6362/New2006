@@ -1,4 +1,4 @@
-name: crime_app
+name: new2006    # <--- must be lowercase, no uppercase letters
 publish_to: 'none'
 version: 1.0.0+1
 
