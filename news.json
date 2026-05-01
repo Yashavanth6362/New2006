@@ -3,70 +3,70 @@
     "id": 47967786,
     "title": "Rivian allows you to disable all internet connectivity",
     "url": "https://rivian.com/support/article/can-i-disable-all-data-collection-from-my-vehicle",
-    "score": 348,
+    "score": 470,
     "time": 1777580842
-  },
-  {
-    "id": 47967262,
-    "title": "LinkedIn scans for 6,278 extensions and encrypts the results into every request",
-    "url": "https://404privacy.com/blog/linkedin-is-scanning-your-browser-extensions-this-is-how-they-use-the-data/",
-    "score": 314,
-    "time": 1777578020
   },
   {
     "id": 47965060,
     "title": "How Mark Klein told the EFF about Room 641A [book excerpt]",
     "url": "https://thereader.mitpress.mit.edu/the-whistleblower-who-uncovered-the-nsas-big-brother-machine/",
-    "score": 383,
+    "score": 421,
     "time": 1777567260
   },
   {
     "id": 47951295,
     "title": "Opus 4.7 knows the real Kelsey",
     "url": "https://www.theargumentmag.com/p/i-can-never-talk-to-an-ai-anonymously",
-    "score": 82,
+    "score": 136,
     "time": 1777482543
+  },
+  {
+    "id": 47965108,
+    "title": "CopyFail was not disclosed to distro developers?",
+    "url": "https://www.openwall.com/lists/oss-security/2026/04/30/10",
+    "score": 362,
+    "time": 1777567427
   },
   {
     "id": 47964617,
     "title": "Shai-Hulud Themed Malware Found in the PyTorch Lightning AI Training Library",
     "url": "https://semgrep.dev/blog/2026/malicious-dependency-in-pytorch-lightning-used-for-ai-training/",
-    "score": 301,
+    "score": 321,
     "time": 1777565366
   },
   {
     "id": 47965503,
     "title": "I built a Game Boy emulator in F#",
     "url": "https://nickkossolapov.github.io/fame-boy/building-a-game-boy-emulator-in-fsharp/",
-    "score": 181,
+    "score": 208,
     "time": 1777569261
   },
   {
     "id": 47963204,
     "title": "Claude Code refuses requests or charges extra if your commits mention \"OpenClaw\"",
     "url": "https://twitter.com/theo/status/2049645973350363168",
-    "score": 875,
+    "score": 943,
     "time": 1777559818
   },
   {
     "id": 47962548,
     "title": "How an oil refinery works",
     "url": "https://www.construction-physics.com/p/how-an-oil-refinery-works",
-    "score": 293,
+    "score": 319,
     "time": 1777557260
   },
   {
-    "id": 47961319,
-    "title": "Belgium stops decommissioning nuclear power plants",
-    "url": "https://dpa-international.com/general-news/urn:newsml:dpa.com:20090101:260430-930-14717/",
-    "score": 715,
-    "time": 1777551434
+    "id": 47967508,
+    "title": "The upsell game \u2013 Vercel upselling tactics revealed",
+    "url": "https://theupsellgame.com/",
+    "score": 90,
+    "time": 1777579355
   },
   {
-    "id": 47937033,
-    "title": "New mechanical panoramic film camera from Jeff Bridges",
-    "url": "https://wideluxx.com",
-    "score": 50,
-    "time": 1777394952
+    "id": 47937814,
+    "title": "Reverse Engineering SimTower",
+    "url": "https://phulin.me/blog/simtower",
+    "score": 112,
+    "time": 1777398098
   }
 ]
