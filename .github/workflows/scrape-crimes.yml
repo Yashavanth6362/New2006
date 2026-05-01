@@ -23,7 +23,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4
+        run: pip install feedparser
 
       - name: Run crime scraper
         run: python scrape_crimes.py
