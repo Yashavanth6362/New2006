@@ -1,0 +1,78 @@
+name: Build Crime Search App (Web + Android)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  # ---- 1. Scrape fresh data ----
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install feedparser
+      - run: python scrape_crimes.py
+      - run: |
+          git config user.name "bot"
+          git config user.email "bot@github.com"
+          git add crimes.json
+          git diff --staged --quiet || git commit -m "update crime data"
+          git push
+
+  # ---- 2. Build Flutter Web ----
+  build-web:
+    needs: scrape
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+
+      - name: Copy crimes.json into app
+        run: cp crimes.json crime_search_app/crimes.json
+
+      - name: Build web
+        working-directory: ./crime_search_app
+        run: |
+          flutter pub get
+          flutter build web --release
+
+      - name: Upload web build
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-app
+          path: crime_search_app/build/web
+
+  # ---- 3. Build Flutter Android APK ----
+  build-android:
+    needs: scrape
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+
+      - name: Copy crimes.json into app
+        run: cp crimes.json crime_search_app/crimes.json
+
+      - name: Build APK
+        working-directory: ./crime_search_app
+        run: |
+          flutter pub get
+          flutter build apk --release
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-apk
+          path: crime_search_app/build/app/outputs/flutter-apk/app-release.apk
