@@ -17,24 +17,11 @@ OUTPUT_FILE = "crimes.json"
 # List of RSS feeds – verify URLs are still active.
 # You can add/remove feeds easily.
 SITES = [
-    {
-        "name": "Times of India - Crime",
-        "url": "https://timesofindia.indiatimes.com/rssfeeds/4719148.cms",
-    },
-    {
-        "name": "NDTV - Crime",
-        "url": "https://feeds.feedburner.com/ndtvnews-crime",
-    },
-    {
-        "name": "India Today - Crime",
-        "url": "https://www.indiatoday.in/feed/crime",
-    },
-    {
-        "name": "Hindustan Times - Crime",
-        "url": "https://www.hindustantimes.com/feeds/rss/crime/rssfeed.xml",
-    },
-    # Optional: The Hindu – uses region/city feeds
-    # {"name": "The Hindu - Delhi Crime", "url": "https://www.thehindu.com/news/cities/Delhi/feeder/default.rss"},
+    {"name": "NDTV Crime", "url": "https://feeds.feedburner.com/ndtvnews-crime"},
+    {"name": "India Today Crime", "url": "https://www.indiatoday.in/feed/crime"},
+    {"name": "Google News - Crime India", "url": "https://news.google.com/rss/search?q=crime+India&hl=en-IN&gl=IN&ceid=IN:en"},
+    {"name": "Google News - Rape India", "url": "https://news.google.com/rss/search?q=rape+India&hl=en-IN&gl=IN&ceid=IN:en"},
+    {"name": "Hindustan Times Crime", "url": "https://www.hindustantimes.com/feeds/rss/crime/rssfeed.xml"},  # keep as backup
 ]
 
 # ─── KEYWORD LOOKUP TABLES ─────────────────────────────
