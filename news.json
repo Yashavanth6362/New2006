@@ -3,70 +3,70 @@
     "id": 47965060,
     "title": "How Mark Klein told the EFF about Room 641A [book excerpt]",
     "url": "https://thereader.mitpress.mit.edu/the-whistleblower-who-uncovered-the-nsas-big-brother-machine/",
-    "score": 492,
+    "score": 554,
     "time": 1777567260
   },
   {
-    "id": 47965108,
-    "title": "For Linux kernel vulnerabilities, there is no heads-up to distributions",
-    "url": "https://www.openwall.com/lists/oss-security/2026/04/30/10",
-    "score": 431,
-    "time": 1777567427
+    "id": 47946899,
+    "title": "New copy of earliest poem in English, written 1,3k years ago, discovered in Rome",
+    "url": "https://www.tcd.ie/news_events/articles/2026/caedmons-hymn-discovery/",
+    "score": 37,
+    "time": 1777462540
   },
   {
     "id": 47951295,
     "title": "Opus 4.7 knows the real Kelsey",
     "url": "https://www.theargumentmag.com/p/i-can-never-talk-to-an-ai-anonymously",
-    "score": 239,
+    "score": 314,
     "time": 1777482543
+  },
+  {
+    "id": 47965108,
+    "title": "For Linux kernel vulnerabilities, there is no heads-up to distributions",
+    "url": "https://www.openwall.com/lists/oss-security/2026/04/30/10",
+    "score": 464,
+    "time": 1777567427
   },
   {
     "id": 47964617,
     "title": "Shai-Hulud Themed Malware Found in the PyTorch Lightning AI Training Library",
     "url": "https://semgrep.dev/blog/2026/malicious-dependency-in-pytorch-lightning-used-for-ai-training/",
-    "score": 353,
+    "score": 386,
     "time": 1777565366
-  },
-  {
-    "id": 47939246,
-    "title": "I Got Sick of Remembering Port Numbers",
-    "url": "https://gregraiz.com/blog/local-vibe/",
-    "score": 40,
-    "time": 1777403946
-  },
-  {
-    "id": 47967786,
-    "title": "Can I disable all data collection from my vehicle?",
-    "url": "https://rivian.com/support/article/can-i-disable-all-data-collection-from-my-vehicle",
-    "score": 561,
-    "time": 1777580842
-  },
-  {
-    "id": 47969288,
-    "title": "CPanel and WHM Authentication Bypass \u2013 CVE-2026-41940",
-    "url": "https://labs.watchtowr.com/the-internet-is-falling-down-falling-down-falling-down-cpanel-whm-authentication-bypass-cve-2026-41940/",
-    "score": 68,
-    "time": 1777589331
-  },
-  {
-    "id": 47965503,
-    "title": "I built a Game Boy emulator in F#",
-    "url": "https://nickkossolapov.github.io/fame-boy/building-a-game-boy-emulator-in-fsharp/",
-    "score": 243,
-    "time": 1777569261
   },
   {
     "id": 47948152,
     "title": "Roboticist-Turned-Teacher Built a Life-Size Replica of Eniac",
     "url": "https://spectrum.ieee.org/roboticist-turned-teacher-eniac-replica",
-    "score": 6,
+    "score": 24,
     "time": 1777469327
   },
   {
-    "id": 47963204,
-    "title": "Claude Code refuses requests or charges extra if your commits mention \"OpenClaw\"",
-    "url": "https://twitter.com/theo/status/2049645973350363168",
-    "score": 1039,
-    "time": 1777559818
+    "id": 47942863,
+    "title": "Maladaptive Frugality",
+    "url": "https://herbertlui.net/maladaptive-frugality/",
+    "score": 83,
+    "time": 1777423815
+  },
+  {
+    "id": 47927011,
+    "title": "Softmax, can you derive the Jacobian? And should you care?",
+    "url": "https://idlemachines.co.uk/essays/softmax",
+    "score": 20,
+    "time": 1777322302
+  },
+  {
+    "id": 47969288,
+    "title": "CPanel and WHM Authentication Bypass \u2013 CVE-2026-41940",
+    "url": "https://labs.watchtowr.com/the-internet-is-falling-down-falling-down-falling-down-cpanel-whm-authentication-bypass-cve-2026-41940/",
+    "score": 88,
+    "time": 1777589331
+  },
+  {
+    "id": 47967786,
+    "title": "Can I disable all data collection from my vehicle?",
+    "url": "https://rivian.com/support/article/can-i-disable-all-data-collection-from-my-vehicle",
+    "score": 604,
+    "time": 1777580842
   }
 ]
