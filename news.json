@@ -1,72 +1,72 @@
 [
   {
-    "id": 47972888,
-    "title": "Show HN: Perfect Bluetooth MIDI for Windows",
-    "url": null,
-    "score": 35,
-    "time": 1777629135
-  },
-  {
     "id": 47973376,
     "title": "Your Website Is Not for You",
     "url": "https://websmith.studio/blog/your-website-is-not-for-you/",
-    "score": 7,
+    "score": 84,
     "time": 1777633700
   },
   {
-    "id": 47972511,
-    "title": "Show HN: WhatCable, a tiny menu bar app for inspecting USB-C cables",
-    "url": "https://github.com/darrylmorley/whatcable",
-    "score": 138,
-    "time": 1777625025
+    "id": 47973755,
+    "title": "Running Adobe's 1991 PostScript Interpreter in the Browser",
+    "url": "https://www.pagetable.com/?p=1854",
+    "score": 23,
+    "time": 1777636691
+  },
+  {
+    "id": 47973559,
+    "title": "Show HN: Site Mogging",
+    "url": "https://sitemogging.com",
+    "score": 21,
+    "time": 1777635168
+  },
+  {
+    "id": 47973378,
+    "title": "Apple accidentally left Claude.md files Apple Support app",
+    "url": "https://xcancel.com/aaronp613/status/2049986504617820551",
+    "score": 91,
+    "time": 1777633712
+  },
+  {
+    "id": 47972888,
+    "title": "Show HN: Perfect Bluetooth MIDI for Windows",
+    "url": null,
+    "score": 51,
+    "time": 1777629135
   },
   {
     "id": 47965060,
     "title": "How Mark Klein told the EFF about Room 641A [book excerpt]",
     "url": "https://thereader.mitpress.mit.edu/the-whistleblower-who-uncovered-the-nsas-big-brother-machine/",
-    "score": 616,
+    "score": 637,
     "time": 1777567260
   },
   {
-    "id": 47972447,
-    "title": "Grok 4.3",
-    "url": "https://docs.x.ai/developers/models/grok-4.3",
-    "score": 130,
-    "time": 1777624171
+    "id": 47972511,
+    "title": "Show HN: WhatCable, a tiny menu bar app for inspecting USB-C cables",
+    "url": "https://github.com/darrylmorley/whatcable",
+    "score": 183,
+    "time": 1777625025
   },
   {
     "id": 47946899,
     "title": "New copy of earliest poem in English, written 1,3k years ago, discovered in Rome",
     "url": "https://www.tcd.ie/news_events/articles/2026/caedmons-hymn-discovery/",
-    "score": 83,
+    "score": 100,
     "time": 1777462540
+  },
+  {
+    "id": 47972447,
+    "title": "Grok 4.3",
+    "url": "https://docs.x.ai/developers/models/grok-4.3",
+    "score": 171,
+    "time": 1777624171
   },
   {
     "id": 47965108,
     "title": "For Linux kernel vulnerabilities, there is no heads-up to distributions",
     "url": "https://www.openwall.com/lists/oss-security/2026/04/30/10",
-    "score": 519,
+    "score": 538,
     "time": 1777567427
-  },
-  {
-    "id": 47970622,
-    "title": "OpenWarp",
-    "url": "https://openwarp.zerx.dev",
-    "score": 106,
-    "time": 1777601446
-  },
-  {
-    "id": 47973084,
-    "title": "A beginner's guide to Sourcehut (2025)",
-    "url": "https://btxx.org/posts/beginners-guide-sourcehut/",
-    "score": 23,
-    "time": 1777631032
-  },
-  {
-    "id": 47927011,
-    "title": "Softmax, can you derive the Jacobian? And should you care?",
-    "url": "https://idlemachines.co.uk/essays/softmax",
-    "score": 62,
-    "time": 1777322302
   }
 ]
