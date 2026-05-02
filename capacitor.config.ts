@@ -5,10 +5,10 @@ const config: CapacitorConfig = {
   appName: 'Easy APK',
   webDir: 'www',
   server: {
-    url: 'https://yourwebsite.com',   // <– your site
+    url: 'https://royzoworld.ai1x.us.ci',   // <– your site
     cleartext: true,                  // keep if HTTP
     // 👇 This is the key line: catch all pages
-    allowNavigation: ['yourwebsite.com']  // only navigate inside your domain
+    allowNavigation: ['royzoworld.ai1x.us.ci']  // only navigate inside your domain
   },
   android: {
     allowMixedContent: true
