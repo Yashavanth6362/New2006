@@ -35,7 +35,8 @@ jobs:
 
       - name: Add Android platform
         run: npx cap add android || true
-
+       - name: Install notification plugin
+  run: npm install @capacitor/local-notifications --legacy-peer-deps
       - name: Sync Capacitor
         run: npx cap sync android
       - name: Install & run icon generator
