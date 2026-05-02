@@ -31,7 +31,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Install Capacitor Android platform
-        run: npm install @capacitor/android@^6.0.0 --legacy-peer-deps
+        run: npm install @capacitor/android --legacy-peer-deps
 
       - name: Add Android platform
         run: npx cap add android || true
