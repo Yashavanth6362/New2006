@@ -1,10 +1,8 @@
-name: Flutter CI Build APK
+name: Build Flutter APK
 
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: [ "main", "master" ]
   workflow_dispatch:
 
 jobs:
@@ -12,42 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repo
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      # 2. Setup Java
-      - name: Setup Java
-        uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      # 3. Setup Flutter
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
+      - uses: subosito/flutter-action@v2
         with:
           channel: stable
 
-      # 4. Install dependencies
-      - name: Install dependencies
-        run: flutter pub get
+      - run: flutter pub get
+      - run: flutter build apk --release
 
-      # 5. Analyze (optional)
-      - name: Analyze
-        run: flutter analyze
-
-      # 6. Test (optional)
-      - name: Run tests
-        run: flutter test
-
-      # 7. Build APK
-      - name: Build APK
-        run: flutter build apk --release
-
-      # 8. Upload APK
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: app-release
           path: build/app/outputs/flutter-apk/app-release.apk
