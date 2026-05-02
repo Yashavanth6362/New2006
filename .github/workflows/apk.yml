@@ -13,7 +13,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22          # ← updated
+          node-version: 20
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -32,6 +32,9 @@ jobs:
 
       - name: Install Capacitor Android platform
         run: npm install @capacitor/android --legacy-peer-deps
+
+      - name: Install TypeScript (required by capacitor.config.ts)
+        run: npm install -D typescript
 
       - name: Add Android platform
         run: npx cap add android || true
