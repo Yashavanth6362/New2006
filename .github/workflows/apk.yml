@@ -38,6 +38,10 @@ jobs:
 
       - name: Sync Capacitor
         run: npx cap sync android
+      - name: Install & run icon generator
+       run: |
+    npm install @capacitor/assets --save-dev
+    npx capacitor-assets generate --android
 
       - name: Ensure gradlew is executable
         run: chmod +x android/gradlew
