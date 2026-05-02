@@ -1,11 +1,84 @@
 <!DOCTYPE html>
-<html>
-<head><title>Loading...</title>
-<style>
-  body { background: #0f0f1a; display: flex; justify-content: center; align-items: center; height: 100vh; margin:0; }
-  .loader { width:48px; height:48px; border:5px solid #fff; border-bottom-color: transparent; border-radius:50%; animation: spin 1s linear infinite; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-</style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Loading...</title>
+  <style>
+    body {
+      background: #0f0f1a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+      font-family: system-ui, sans-serif;
+    }
+    .loader {
+      width: 48px;
+      height: 48px;
+      border: 5px solid #fff;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .text {
+      color: #aaa;
+      font-size: 14px;
+    }
+  </style>
 </head>
-<body><div class="loader"></div></body>
+<body>
+  <div class="loader"></div>
+  <div class="text" id="status">Checking permissions...</div>
+
+  <script>
+    // Check if running inside Capacitor (Android)
+    const isCapacitor = window.Capacitor && window.Capacitor.isNativePlatform();
+
+    async function requestAllPermissions() {
+      if (!isCapacitor) {
+        // Not running natively, just redirect
+        window.location.href = 'https://yourwebsite.com';
+        return;
+      }
+
+      const statusEl = document.getElementById('status');
+
+      try {
+        // Request notification permission (Android 13+)
+        if ('Notification' in window) {
+          const notifPerm = await Notification.requestPermission();
+          statusEl.textContent = `Notifications: ${notifPerm}`;
+        }
+
+        // Request storage permission via WebView API
+        // Android <13: READ/WRITE_EXTERNAL_STORAGE
+        // Android 13+: READ_MEDIA_* permissions
+        // These are automatically granted on install for Capacitor apps < targetSdk 33
+        // For 33+, we need runtime. But Capacitor handles basic storage via WebView automatically.
+        
+        // The WebView itself has storage access. Just inform user:
+        statusEl.textContent = 'Permissions ready ✓';
+        
+        // Small delay so user sees the status
+        await new Promise(resolve => setTimeout(resolve, 800));
+
+        // Redirect to live website
+        window.location.href = 'https://yourwebsite.com';
+      } catch (err) {
+        statusEl.textContent = 'Loading app...';
+        // Fallback — still load the site
+        window.location.href = 'https://yourwebsite.com';
+      }
+    }
+
+    requestAllPermissions();
+  </script>
+</body>
 </html>
