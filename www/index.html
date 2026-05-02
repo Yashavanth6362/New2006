@@ -1,9 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>APK App</title>
+<meta charset="UTF-8">
+<title>My Proposal ❤️</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #ff758c, #ff7eb3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+        text-align: center;
+    }
+
+    .card {
+        background: rgba(0,0,0,0.4);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+
+    button {
+        padding: 12px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .yes {
+        background: #00ff88;
+        color: black;
+    }
+
+    .no {
+        background: #ff4d4d;
+        color: white;
+        position: absolute;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+    }
+</style>
 </head>
+
 <body>
-  <h1>🚀 Hello APK (One-click build)</h1>
+
+<div class="card">
+    <h1>💖 Will You Be Mine? 💖</h1>
+    <p>
+        From the moment I met you, my world changed.  
+        You are special to me... more than words can say.
+    </p>
+
+    <button class="yes" onclick="yesClick()">Yes ❤️</button>
+    <button class="no" id="noBtn" onmouseover="moveNo()">No 😢</button>
+</div>
+
+<script>
+function yesClick() {
+    document.body.innerHTML = "<h1>Yay! 💕 I Love You So Much 💕</h1>";
+}
+
+function moveNo() {
+    let btn = document.getElementById("noBtn");
+    let x = Math.random() * (window.innerWidth - 100);
+    let y = Math.random() * (window.innerHeight - 50);
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+}
+</script>
+
 </body>
 </html>
