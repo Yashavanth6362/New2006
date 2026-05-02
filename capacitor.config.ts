@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.easy.apk',
-  appName: 'Easy APK',
+  appName: 'Royzo',
   webDir: 'www'
 };
 
