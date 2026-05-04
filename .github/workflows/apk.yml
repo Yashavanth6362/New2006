@@ -13,7 +13,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22   # ← was 20, now 22
+          node-version: '22'
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -33,16 +33,19 @@ jobs:
       - name: Install Capacitor Android platform
         run: npm install @capacitor/android --legacy-peer-deps
 
+      - name: Install notification plugin
+        run: npm install @capacitor/local-notifications --legacy-peer-deps
+
       - name: Add Android platform
         run: npx cap add android || true
-       - name: Install notification plugin
-  run: npm install @capacitor/local-notifications --legacy-peer-deps
+
       - name: Sync Capacitor
         run: npx cap sync android
+
       - name: Install & run icon generator
-       run: |
-    npm install @capacitor/assets --save-dev
-    npx capacitor-assets generate --android
+        run: |
+          npm install @capacitor/assets --save-dev
+          npx capacitor-assets generate --android
 
       - name: Ensure gradlew is executable
         run: chmod +x android/gradlew
