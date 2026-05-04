@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.easy.apk',
-  appName: 'royzo',
+  appId: 'com.royzo.app',
+  appName: 'Royzo',
   webDir: 'www',
   server: {
     url: 'https://royzoworld.ai1x.us.ci',
@@ -11,7 +11,6 @@ const config: CapacitorConfig = {
   },
   android: {
     allowMixedContent: true,
-    // 👇 Add these manifest permissions
     manifest: {
       'uses-permission': [
         { 'android:name': 'android.permission.INTERNET' },
