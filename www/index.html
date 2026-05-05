@@ -7,13 +7,19 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #0a0a1a; display: flex; justify-content: center; align-items: center;
-      height: 100vh; font-family: system-ui, sans-serif; flex-direction: column;
+      background: #0a0a1a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: system-ui, sans-serif;
+      flex-direction: column;
     }
     .loader {
-      width: 48px; height: 48px; border: 4px solid #fff;
-      border-bottom-color: #6c5ce7; border-radius: 50%;
-      animation: spin 1s linear infinite; margin-bottom: 20px;
+      width: 48px; height: 48px;
+      border: 4px solid #fff; border-bottom-color: #6c5ce7;
+      border-radius: 50%; animation: spin 1s linear infinite;
+      margin-bottom: 20px;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
     .text { color: #aaa; font-size: 14px; text-align: center; padding: 0 20px; }
@@ -21,60 +27,53 @@
 </head>
 <body>
   <div class="loader"></div>
-  <div class="text" id="status">Initializing permissions...</div>
+  <div class="text" id="status">Setting up permissions...</div>
 
   <script>
     (async function() {
       const statusEl = document.getElementById('status');
       const isNative = window.Capacitor && window.Capacitor.isNativePlatform();
 
-      const request = async (promise, name) => {
-        try {
-          statusEl.textContent = `Requesting ${name}...`;
-          await promise;
-          console.log(`${name} granted`);
-        } catch (e) {
-          console.log(`${name} denied or error:`, e.message);
-        }
-      };
-
       if (isNative) {
-        // 1. Notifications
+        // Request notification permission (already working)
         if ('Notification' in window && Notification.permission === 'default') {
-          await request(Notification.requestPermission(), 'notifications');
+          statusEl.textContent = 'Requesting notification access...';
+          await Notification.requestPermission();
         }
 
-        // 2. Camera
-        if (navigator.mediaDevices?.getUserMedia) {
-          const cam = async () => {
+        // Request camera permission (will trigger system dialog)
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          try {
+            statusEl.textContent = 'Requesting camera access...';
             const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-            stream.getTracks().forEach(t => t.stop());
-          };
-          await request(cam(), 'camera');
+            stream.getTracks().forEach(track => track.stop()); // release immediately
+          } catch (e) {
+            console.log('Camera permission denied or already granted');
+          }
         }
 
-        // 3. Microphone
-        if (navigator.mediaDevices?.getUserMedia) {
-          const mic = async () => {
+        // Request microphone permission
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          try {
+            statusEl.textContent = 'Requesting microphone access...';
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-            stream.getTracks().forEach(t => t.stop());
-          };
-          await request(mic(), 'microphone');
+            stream.getTracks().forEach(track => track.stop());
+          } catch (e) {
+            console.log('Microphone permission denied or already granted');
+          }
         }
 
-        // 4. Location
+        // Request location permission
         if (navigator.geolocation) {
-          const loc = new Promise((resolve, reject) => {
-            navigator.geolocation.getCurrentPosition(resolve, reject, { timeout: 5000 });
-          });
-          await request(loc, 'location');
+          try {
+            statusEl.textContent = 'Requesting location access...';
+            await new Promise((resolve, reject) => {
+              navigator.geolocation.getCurrentPosition(resolve, reject, { timeout: 5000 });
+            });
+          } catch (e) {
+            console.log('Location permission denied or already granted');
+          }
         }
-
-        // 5. File storage – not directly requestable, but we can trigger a file picker
-        // This does NOT show a permission dialog, but it ensures the media permissions are used
-        // For a real use case, your website would call <input type="file"> later.
-        // We'll just log that storage is available.
-        console.log('Storage permissions are declared and available when website uses file input.');
       }
 
       statusEl.textContent = 'Loading Royzo...';
